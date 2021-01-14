@@ -71,3 +71,22 @@ for ind, postal_code in enumerate(postal_codes_dict):
 
 # print number of rows of dataframe
 toronto_data.shape[0]
+
+# Problem 2
+## solving problem 2
+import geocoder # import geocoder
+
+# initialize your variable to None
+lat_lng_coords = None
+
+# loop until you get the coordinates
+while(lat_lng_coords is None):
+  g = geocoder.google('{}, Toronto, Ontario'.format(postal_code))
+  lat_lng_coords = g.latlng
+
+latitude = lat_lng_coords[0]
+longitude = lat_lng_coords[1]
+
+# Problem 3
+## Solving Problem 3
+
